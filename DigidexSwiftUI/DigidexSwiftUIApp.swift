@@ -11,7 +11,8 @@ import SwiftUI
 struct DigidexSwiftUIApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            SignInView()
+//            DigimonTabView()
         }
     }
 }
