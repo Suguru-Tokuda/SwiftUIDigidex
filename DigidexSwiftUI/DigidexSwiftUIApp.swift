@@ -12,7 +12,6 @@ struct DigidexSwiftUIApp: App {
     var body: some Scene {
         WindowGroup {
             SignInView()
-//            DigimonTabView()
         }
     }
 }
