@@ -16,15 +16,17 @@ struct DigimonListView: View {
                 Color.theme.background.ignoresSafeArea()
                 List {
                     ForEach(vm.digimons, id: \.self) { digimon in
-                        NavigationLink {
-                            DigimonDetailView(digimon: digimon)
-                        } label: {
-                            DigimonListViewCell(digimon: digimon)
-                                .listRowInsets(EdgeInsets(top: 5, leading: 10, bottom: 5, trailing: 10))
-                        }
+                        DigimonListViewCell(digimon: digimon)
+                            .listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 0.5, trailing: 0))
+                            .background(Color.theme.background)
+                            .background(NavigationLink("", destination: {
+                                DigimonDetailView(digimon: digimon)
+                            }))
                     }
                 }
                 .listStyle(.plain)
+                .scrollContentBackground(.hidden)
+                .background(Color.theme.background)
             }
         }
     }
