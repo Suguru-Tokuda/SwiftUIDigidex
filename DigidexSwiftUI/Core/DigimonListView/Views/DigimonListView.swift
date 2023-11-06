@@ -24,6 +24,7 @@ struct DigimonListView: View {
                             }))
                     }
                 }
+                .padding(.horizontal, 5)
                 .listStyle(.plain)
                 .scrollContentBackground(.hidden)
                 .background(Color.theme.background)

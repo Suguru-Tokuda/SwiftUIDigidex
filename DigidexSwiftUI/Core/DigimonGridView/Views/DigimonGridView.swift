@@ -18,35 +18,38 @@ struct DigimonGridView: View {
         NavigationStack {
             ZStack {
                 Color.theme.background.ignoresSafeArea()
-                if axes == .vertical {
-                    ScrollView {
-                        LazyVGrid(columns: columns) {
-                            ForEach(vm.digimons, id: \.self) { digimon in
-                                NavigationLink {
-                                    DigimonDetailView(digimon: digimon)
-                                } label: {
-                                    DigimonGridViewCell(digimon: digimon)
+                ZStack {
+                    if axes == .vertical {
+                        ScrollView {
+                            LazyVGrid(columns: columns) {
+                                ForEach(vm.digimons, id: \.self) { digimon in
+                                    NavigationLink {
+                                        DigimonDetailView(digimon: digimon)
+                                    } label: {
+                                        DigimonGridViewCell(digimon: digimon)
+                                    }
                                 }
                             }
                         }
-                    }
-                } else {
-                    ScrollView(.vertical) {
-                        ForEach(vm.sections, id: \.self) { el in
-                            if let digimons = vm.digimonDict[el] {
-                                VStack(alignment: .leading) {
-                                    Text(el)
-                                        .font(.title3)
-                                        .fontWeight(.bold)
-                                    Spacer()
-                                }
-                                ScrollView(.horizontal) {
-                                    LazyHGrid(rows: rows) {
-                                        ForEach(digimons, id: \.self) { digimon in
-                                            NavigationLink {
-                                                DigimonDetailView(digimon: digimon)
-                                            } label: {
-                                                DigimonGridViewCell(digimon: digimon)
+                    } else {
+                        ScrollView(.vertical) {
+                            ForEach(vm.sections, id: \.self) { el in
+                                if let digimons = vm.digimonDict[el] {
+                                    VStack(alignment: .leading) {
+                                        Text(el)
+                                            .font(.title3)
+                                            .fontWeight(.bold)
+                                        Spacer()
+                                    }
+                                    .frame(maxWidth: .infinity, alignment: .leading)
+                                    ScrollView(.horizontal) {
+                                        LazyHGrid(rows: rows) {
+                                            ForEach(digimons, id: \.self) { digimon in
+                                                NavigationLink {
+                                                    DigimonDetailView(digimon: digimon)
+                                                } label: {
+                                                    DigimonGridViewCell(digimon: digimon)
+                                                }
                                             }
                                         }
                                     }
@@ -54,7 +57,9 @@ struct DigimonGridView: View {
                             }
                         }
                     }
+
                 }
+                    .padding(.horizontal, 5)
             }
         }
     }
