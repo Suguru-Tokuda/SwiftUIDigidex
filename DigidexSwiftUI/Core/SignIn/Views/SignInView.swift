@@ -88,6 +88,8 @@ struct SignInView: View {
                 .padding(.horizontal, 10)
             }
         }
+        .scrollDismissesKeyboard(.interactively)
+        .ignoresSafeArea(.keyboard)
     }
 }
 

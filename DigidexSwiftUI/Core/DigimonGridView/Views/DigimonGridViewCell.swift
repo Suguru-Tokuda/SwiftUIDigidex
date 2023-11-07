@@ -29,6 +29,8 @@ struct DigimonGridViewCell: View {
             Text(digimon.name)
                 .font(.caption2)
                 .fontWeight(.bold)
+                .truncationMode(.tail)
+                .lineLimit(1)
                 .foregroundStyle(Color.theme.text)
         }
         .frame(width: 100, height: 150)
