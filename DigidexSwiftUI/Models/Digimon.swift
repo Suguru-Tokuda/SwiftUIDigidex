@@ -12,14 +12,8 @@ struct Digimon : Codable, Identifiable, Hashable {
     var name: String
     var img: String
     var level: String
-    
-    enum CodingKeys: String, CodingKey {
-        case id, name, img, level
-    }
-}
 
-struct DigimonSimple : Decodable {
-    var name: String
-    var img: String
-    var level: String
+    enum CodingKeys: String, CodingKey {
+        case name, img, level
+    }
 }

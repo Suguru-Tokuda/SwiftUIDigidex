@@ -87,15 +87,15 @@
 		BB8EB9522AF96102009773CA /* DigidexSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
-				BB8EB9782AF96B40009773CA /* Enums */,
-				BB8EB96F2AF967E4009773CA /* Utilities */,
-				BB8EB96E2AF967DA009773CA /* Services */,
-				BB8EB96B2AF962B8009773CA /* Extensions */,
-				BB8EB9622AF9610D009773CA /* Core */,
-				BB8EB9612AF96108009773CA /* Models */,
 				BB8EB9532AF96102009773CA /* DigidexSwiftUIApp.swift */,
 				BB8EB9572AF96103009773CA /* Assets.xcassets */,
+				BB8EB9622AF9610D009773CA /* Core */,
+				BB8EB9782AF96B40009773CA /* Enums */,
+				BB8EB96B2AF962B8009773CA /* Extensions */,
+				BB8EB9612AF96108009773CA /* Models */,
 				BB8EB9592AF96103009773CA /* Preview Content */,
+				BB8EB96E2AF967DA009773CA /* Services */,
+				BB8EB96F2AF967E4009773CA /* Utilities */,
 			);
 			path = DigidexSwiftUI;
 			sourceTree = "<group>";
