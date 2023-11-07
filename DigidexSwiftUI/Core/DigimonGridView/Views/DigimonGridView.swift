@@ -20,46 +20,57 @@ struct DigimonGridView: View {
                 Color.theme.background.ignoresSafeArea()
                 ZStack {
                     if axes == .vertical {
-                        ScrollView {
-                            LazyVGrid(columns: columns) {
-                                ForEach(vm.digimons, id: \.self) { digimon in
-                                    NavigationLink {
-                                        DigimonDetailView(digimon: digimon)
-                                    } label: {
-                                        DigimonGridViewCell(digimon: digimon)
-                                    }
-                                }
-                            }
-                        }
+                        verticalGrid
                     } else {
-                        ScrollView(.vertical) {
-                            ForEach(vm.sections, id: \.self) { el in
-                                if let digimons = vm.digimonDict[el] {
-                                    VStack(alignment: .leading) {
-                                        Text(el)
-                                            .font(.title3)
-                                            .fontWeight(.bold)
-                                        Spacer()
-                                    }
-                                    .frame(maxWidth: .infinity, alignment: .leading)
-                                    ScrollView(.horizontal) {
-                                        LazyHGrid(rows: rows) {
-                                            ForEach(digimons, id: \.self) { digimon in
-                                                NavigationLink {
-                                                    DigimonDetailView(digimon: digimon)
-                                                } label: {
-                                                    DigimonGridViewCell(digimon: digimon)
-                                                }
-                                            }
-                                        }
-                                    }
+                        horizontalGrid
+                    }
+                }
+                .padding(.horizontal, 5)
+            }
+        }
+    }
+}
+
+extension DigimonGridView {
+    var verticalGrid: some View {
+        ScrollView {
+            LazyVGrid(columns: columns) {
+                ForEach(vm.digimons, id: \.self) { digimon in
+                    NavigationLink {
+                        DigimonDetailView(digimon: digimon)
+                    } label: {
+                        DigimonGridViewCell(digimon: digimon)
+                    }
+                }
+            }
+        }
+    }
+}
+
+extension DigimonGridView {
+    var horizontalGrid: some View {
+        ScrollView(.vertical) {
+            ForEach(vm.sections, id: \.self) { el in
+                if let digimons = vm.digimonDict[el] {
+                    VStack(alignment: .leading) {
+                        Text(el)
+                            .font(.title3)
+                            .fontWeight(.bold)
+                        Spacer()
+                    }
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    ScrollView(.horizontal) {
+                        LazyHGrid(rows: rows) {
+                            ForEach(digimons, id: \.self) { digimon in
+                                NavigationLink {
+                                    DigimonDetailView(digimon: digimon)
+                                } label: {
+                                    DigimonGridViewCell(digimon: digimon)
                                 }
                             }
                         }
                     }
-
                 }
-                    .padding(.horizontal, 5)
             }
         }
     }
