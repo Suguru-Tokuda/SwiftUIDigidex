@@ -21,11 +21,11 @@ struct DigimonGridView: View {
                 ZStack {
                     switch axes {
                     case .vertical:
-                        verticalGrid
+                        verticalGrid()
                     case .horizontal:
-                        horizontalGrid
+                        horizontalGrid()
                     default:
-                        verticalGrid
+                        verticalGrid()
                     }
                 }
                 .padding(.horizontal, 5)
@@ -35,7 +35,8 @@ struct DigimonGridView: View {
 }
 
 extension DigimonGridView {
-    var verticalGrid: some View {
+    @ViewBuilder
+    func verticalGrid() -> some View {
         ScrollView {
             LazyVGrid(columns: columns) {
                 ForEach(vm.digimons, id: \.self) { digimon in
@@ -51,7 +52,8 @@ extension DigimonGridView {
 }
 
 extension DigimonGridView {
-    var horizontalGrid: some View {
+    @ViewBuilder
+    func horizontalGrid() -> some View {
         ScrollView(.vertical) {
             ForEach(vm.sections, id: \.self) { el in
                 if let digimons = vm.digimonDict[el] {
