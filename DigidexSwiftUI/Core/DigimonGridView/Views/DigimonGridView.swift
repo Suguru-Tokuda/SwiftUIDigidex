@@ -19,10 +19,13 @@ struct DigimonGridView: View {
             ZStack {
                 Color.theme.background.ignoresSafeArea()
                 ZStack {
-                    if axes == .vertical {
+                    switch axes {
+                    case .vertical:
                         verticalGrid
-                    } else {
+                    case .horizontal:
                         horizontalGrid
+                    default:
+                        verticalGrid
                     }
                 }
                 .padding(.horizontal, 5)
@@ -70,6 +73,7 @@ extension DigimonGridView {
                             }
                         }
                     }
+                    .scrollIndicators(.hidden)
                 }
             }
         }
