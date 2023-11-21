@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct DigimonTabView: View {
+struct DigimonTabView: View, Hashable {
     var body: some View {
         TabView {
             DigimonListView()
@@ -31,8 +31,18 @@ struct DigimonTabView: View {
                         icon: { Image(systemName: "circle.grid.2x1") }
                     )
                 }
+            FromSwiftUIToUIKit()
+                .tabItem {
+                    Label(
+                        title: { Text("UIKit") },
+                        icon: { Image(systemName: "swift") }
+                    )
+                }
         }
         .navigationBarBackButtonHidden()
+        .onAppear {
+            UITabBar.appearance().backgroundColor = UIColor(Color.theme.background)
+        }
     }
 }
 

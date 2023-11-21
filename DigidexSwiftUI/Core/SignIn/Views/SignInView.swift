@@ -8,8 +8,9 @@
 import SwiftUI
 
 struct SignInView: View {
-    @StateObject var vm = SignInViewModel()
-    
+    @StateObject var vm: SignInViewModel = SignInViewModel()
+    @EnvironmentObject var mainVM: MainViewModel
+        
     var body: some View {
         NavigationStack {
             ZStack {
@@ -29,11 +30,13 @@ struct SignInView: View {
                                 .fontWeight(.bold)
                                 .padding(.leading, 5)
                             TextField("", text: $vm.email)
+                                .autocapitalization(.none)
                                 .padding(.horizontal, 10)
                                 .padding(.vertical, 12)
                                 .background(Color.theme.secondaryBackground.cornerRadius(25))
                                 .foregroundStyle(.black)
                                 .font(.headline)
+                                .accessibilityIdentifier("emailTextField")
                         }
                         
                         VStack(alignment: .leading) {
@@ -41,6 +44,7 @@ struct SignInView: View {
                                 .font(.callout)
                                 .fontWeight(.bold)
                                 .padding(.leading, 5)
+                                .autocapitalization(.none)
 
                             SecureField("", text: $vm.password)
                                 .padding(.horizontal, 10)
@@ -48,14 +52,18 @@ struct SignInView: View {
                                 .background(Color.theme.secondaryBackground.cornerRadius(25))
                                 .foregroundStyle(.black)
                                 .font(.headline)
+                                .accessibilityIdentifier("passwordTextField")
                         }
-
                     }
                     Spacer()
                     Spacer()
-                    NavigationLink {
-                        DigimonTabView()
-                    } label: {
+                    Button(action: {
+                        vm.logInBtnTapped { route in
+                            if let route {
+                                mainVM.homeRoute = route
+                            }
+                        }
+                    }, label: {
                         ZStack {
                             Text("Login")
                                 .foregroundStyle(.white)
@@ -69,15 +77,25 @@ struct SignInView: View {
                                 .zIndex(0.9)
                                 .frame(maxHeight: 50)
                         }
-
-                    }
+                    })
+                    .accessibilityIdentifier("loginBtn")
+                    .alert("Login failed", isPresented: $vm.showSignInAlert, actions: {
+                        Button {
+                            vm.resetTextFields()
+                        } label: {
+                            Text("OK")
+                        }
+                    })
                 }
                 .padding(.horizontal, 10)
             }
         }
+        .scrollDismissesKeyboard(.interactively)
+        .ignoresSafeArea(.keyboard)
     }
 }
 
 #Preview {
     SignInView()
+        .environmentObject(MainViewModel())
 }

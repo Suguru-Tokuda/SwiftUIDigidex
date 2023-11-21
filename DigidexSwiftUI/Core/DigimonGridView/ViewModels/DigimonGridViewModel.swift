@@ -41,7 +41,7 @@ class DigimonGridViewModel : ObservableObject {
     
     private func processDigimons(digimons: [Digimon]) {
         self.digimons = digimons
-        var levels: [String] = Array(Set(digimons.map { $0.level }))
+        let levels: [String] = Array(Set(digimons.map { $0.level }))
         
         levels.forEach { level in
             var filtered = digimons.filter { $0.level == level }

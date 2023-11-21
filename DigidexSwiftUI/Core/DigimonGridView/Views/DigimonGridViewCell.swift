@@ -18,12 +18,19 @@ struct DigimonGridViewCell: View {
                     .aspectRatio(contentMode: .fit)
                     .frame(maxWidth: .infinity)
             } placeholder: {
-                Text(digimon.name)
-                    .foregroundStyle(Color.theme.text)
+                ZStack {
+                    ProgressView()
+                        .progressViewStyle(.circular)
+                        .scaleEffect(3)
+                        .controlSize(.mini)
+                }
+                .frame(width: 100, height: 100)
             }
             Text(digimon.name)
-                .font(.caption)
+                .font(.caption2)
                 .fontWeight(.bold)
+                .truncationMode(.tail)
+                .lineLimit(1)
                 .foregroundStyle(Color.theme.text)
         }
         .frame(width: 100, height: 150)

@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BB7DCE3D2B0C65E900D70D3E /* DigidexSwiftUIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7DCE3C2B0C65E900D70D3E /* DigidexSwiftUIUITests.swift */; };
+		BB7DCE3F2B0C65E900D70D3E /* DigidexSwiftUIUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7DCE3E2B0C65E900D70D3E /* DigidexSwiftUIUITestsLaunchTests.swift */; };
 		BB8EB9542AF96102009773CA /* DigidexSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8EB9532AF96102009773CA /* DigidexSwiftUIApp.swift */; };
-		BB8EB9562AF96102009773CA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8EB9552AF96102009773CA /* ContentView.swift */; };
 		BB8EB9582AF96103009773CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB8EB9572AF96103009773CA /* Assets.xcassets */; };
 		BB8EB95B2AF96103009773CA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB8EB95A2AF96103009773CA /* Preview Assets.xcassets */; };
 		BB8EB9682AF96159009773CA /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8EB9672AF96159009773CA /* SignInView.swift */; };
@@ -28,12 +29,30 @@
 		BB8EB98F2AF9720D009773CA /* DigimonDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8EB98E2AF9720D009773CA /* DigimonDetailView.swift */; };
 		BB8EB9912AF972C2009773CA /* Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8EB9902AF972C2009773CA /* Preview.swift */; };
 		BB8EB9942AF97748009773CA /* DigimonTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8EB9932AF97748009773CA /* DigimonTabView.swift */; };
+		BB8EB9992AF9C84A009773CA /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8EB9982AF9C84A009773CA /* MainViewModel.swift */; };
+		BB8EB99B2AF9C8A1009773CA /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8EB99A2AF9C8A1009773CA /* MainView.swift */; };
+		BBE7D6552AFBC4E800F5B6E4 /* FromSwiftUIToUIKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE7D6542AFBC4E800F5B6E4 /* FromSwiftUIToUIKit.swift */; };
+		BBE7D6582AFBC52800F5B6E4 /* MyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE7D6572AFBC52800F5B6E4 /* MyViewController.swift */; };
+		BBE7D65A2AFBC68400F5B6E4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBE7D6592AFBC68400F5B6E4 /* Main.storyboard */; };
+		BBE7D65C2AFBC6A500F5B6E4 /* HiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE7D65B2AFBC6A500F5B6E4 /* HiViewController.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		BB7DCE402B0C65E900D70D3E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BB8EB9482AF96102009773CA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BB8EB94F2AF96102009773CA;
+			remoteInfo = DigidexSwiftUI;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		BB7DCE3A2B0C65E900D70D3E /* DigidexSwiftUIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DigidexSwiftUIUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB7DCE3C2B0C65E900D70D3E /* DigidexSwiftUIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigidexSwiftUIUITests.swift; sourceTree = "<group>"; };
+		BB7DCE3E2B0C65E900D70D3E /* DigidexSwiftUIUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigidexSwiftUIUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		BB8EB9502AF96102009773CA /* DigidexSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DigidexSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB8EB9532AF96102009773CA /* DigidexSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigidexSwiftUIApp.swift; sourceTree = "<group>"; };
-		BB8EB9552AF96102009773CA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		BB8EB9572AF96103009773CA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BB8EB95A2AF96103009773CA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		BB8EB9672AF96159009773CA /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
@@ -53,9 +72,22 @@
 		BB8EB98E2AF9720D009773CA /* DigimonDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigimonDetailView.swift; sourceTree = "<group>"; };
 		BB8EB9902AF972C2009773CA /* Preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preview.swift; sourceTree = "<group>"; };
 		BB8EB9932AF97748009773CA /* DigimonTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigimonTabView.swift; sourceTree = "<group>"; };
+		BB8EB9982AF9C84A009773CA /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		BB8EB99A2AF9C8A1009773CA /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		BBE7D6542AFBC4E800F5B6E4 /* FromSwiftUIToUIKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FromSwiftUIToUIKit.swift; sourceTree = "<group>"; };
+		BBE7D6572AFBC52800F5B6E4 /* MyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyViewController.swift; sourceTree = "<group>"; };
+		BBE7D6592AFBC68400F5B6E4 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		BBE7D65B2AFBC6A500F5B6E4 /* HiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HiViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		BB7DCE372B0C65E900D70D3E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BB8EB94D2AF96102009773CA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -66,10 +98,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BB7DCE3B2B0C65E900D70D3E /* DigidexSwiftUIUITests */ = {
+			isa = PBXGroup;
+			children = (
+				BB7DCE3C2B0C65E900D70D3E /* DigidexSwiftUIUITests.swift */,
+				BB7DCE3E2B0C65E900D70D3E /* DigidexSwiftUIUITestsLaunchTests.swift */,
+			);
+			path = DigidexSwiftUIUITests;
+			sourceTree = "<group>";
+		};
 		BB8EB9472AF96102009773CA = {
 			isa = PBXGroup;
 			children = (
 				BB8EB9522AF96102009773CA /* DigidexSwiftUI */,
+				BB7DCE3B2B0C65E900D70D3E /* DigidexSwiftUIUITests */,
 				BB8EB9512AF96102009773CA /* Products */,
 			);
 			sourceTree = "<group>";
@@ -78,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				BB8EB9502AF96102009773CA /* DigidexSwiftUI.app */,
+				BB7DCE3A2B0C65E900D70D3E /* DigidexSwiftUIUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -85,16 +128,16 @@
 		BB8EB9522AF96102009773CA /* DigidexSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
-				BB8EB9782AF96B40009773CA /* Enums */,
-				BB8EB96F2AF967E4009773CA /* Utilities */,
-				BB8EB96E2AF967DA009773CA /* Services */,
-				BB8EB96B2AF962B8009773CA /* Extensions */,
-				BB8EB9622AF9610D009773CA /* Core */,
-				BB8EB9612AF96108009773CA /* Models */,
 				BB8EB9532AF96102009773CA /* DigidexSwiftUIApp.swift */,
-				BB8EB9552AF96102009773CA /* ContentView.swift */,
 				BB8EB9572AF96103009773CA /* Assets.xcassets */,
+				BB8EB9622AF9610D009773CA /* Core */,
+				BB8EB9782AF96B40009773CA /* Enums */,
+				BB8EB96B2AF962B8009773CA /* Extensions */,
+				BB8EB9612AF96108009773CA /* Models */,
 				BB8EB9592AF96103009773CA /* Preview Content */,
+				BB8EB96E2AF967DA009773CA /* Services */,
+				BB8EB96F2AF967E4009773CA /* Utilities */,
+				BBE7D6592AFBC68400F5B6E4 /* Main.storyboard */,
 			);
 			path = DigidexSwiftUI;
 			sourceTree = "<group>";
@@ -118,6 +161,9 @@
 		BB8EB9622AF9610D009773CA /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				BBE7D6562AFBC50F00F5B6E4 /* UIKitControllers */,
+				BBE7D6532AFBC4D900F5B6E4 /* FromSwiftUIToUIKit */,
+				BB8EB9952AF9C816009773CA /* Main */,
 				BB8EB9922AF97736009773CA /* DigimonTabView */,
 				BB8EB98D2AF971FB009773CA /* DigimonDetailView */,
 				BB8EB97C2AF96C59009773CA /* DigimonGridView */,
@@ -254,9 +300,69 @@
 			path = DigimonTabView;
 			sourceTree = "<group>";
 		};
+		BB8EB9952AF9C816009773CA /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				BB8EB9972AF9C839009773CA /* ViewModels */,
+				BB8EB9962AF9C829009773CA /* Views */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		BB8EB9962AF9C829009773CA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BB8EB99A2AF9C8A1009773CA /* MainView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		BB8EB9972AF9C839009773CA /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				BB8EB9982AF9C84A009773CA /* MainViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		BBE7D6532AFBC4D900F5B6E4 /* FromSwiftUIToUIKit */ = {
+			isa = PBXGroup;
+			children = (
+				BBE7D6542AFBC4E800F5B6E4 /* FromSwiftUIToUIKit.swift */,
+			);
+			path = FromSwiftUIToUIKit;
+			sourceTree = "<group>";
+		};
+		BBE7D6562AFBC50F00F5B6E4 /* UIKitControllers */ = {
+			isa = PBXGroup;
+			children = (
+				BBE7D6572AFBC52800F5B6E4 /* MyViewController.swift */,
+				BBE7D65B2AFBC6A500F5B6E4 /* HiViewController.swift */,
+			);
+			path = UIKitControllers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		BB7DCE392B0C65E900D70D3E /* DigidexSwiftUIUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BB7DCE442B0C65E900D70D3E /* Build configuration list for PBXNativeTarget "DigidexSwiftUIUITests" */;
+			buildPhases = (
+				BB7DCE362B0C65E900D70D3E /* Sources */,
+				BB7DCE372B0C65E900D70D3E /* Frameworks */,
+				BB7DCE382B0C65E900D70D3E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BB7DCE412B0C65E900D70D3E /* PBXTargetDependency */,
+			);
+			name = DigidexSwiftUIUITests;
+			productName = DigidexSwiftUIUITests;
+			productReference = BB7DCE3A2B0C65E900D70D3E /* DigidexSwiftUIUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		BB8EB94F2AF96102009773CA /* DigidexSwiftUI */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = BB8EB95E2AF96103009773CA /* Build configuration list for PBXNativeTarget "DigidexSwiftUI" */;
@@ -284,6 +390,10 @@
 				LastSwiftUpdateCheck = 1500;
 				LastUpgradeCheck = 1500;
 				TargetAttributes = {
+					BB7DCE392B0C65E900D70D3E = {
+						CreatedOnToolsVersion = 15.0.1;
+						TestTargetID = BB8EB94F2AF96102009773CA;
+					};
 					BB8EB94F2AF96102009773CA = {
 						CreatedOnToolsVersion = 15.0.1;
 					};
@@ -303,15 +413,24 @@
 			projectRoot = "";
 			targets = (
 				BB8EB94F2AF96102009773CA /* DigidexSwiftUI */,
+				BB7DCE392B0C65E900D70D3E /* DigidexSwiftUIUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		BB7DCE382B0C65E900D70D3E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BB8EB94E2AF96102009773CA /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBE7D65A2AFBC68400F5B6E4 /* Main.storyboard in Resources */,
 				BB8EB95B2AF96103009773CA /* Preview Assets.xcassets in Resources */,
 				BB8EB9582AF96103009773CA /* Assets.xcassets in Resources */,
 			);
@@ -320,25 +439,38 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		BB7DCE362B0C65E900D70D3E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB7DCE3D2B0C65E900D70D3E /* DigidexSwiftUIUITests.swift in Sources */,
+				BB7DCE3F2B0C65E900D70D3E /* DigidexSwiftUIUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BB8EB94C2AF96102009773CA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBE7D6552AFBC4E800F5B6E4 /* FromSwiftUIToUIKit.swift in Sources */,
 				BB8EB9882AF96C9C009773CA /* DigimonGridViewModel.swift in Sources */,
+				BB8EB99B2AF9C8A1009773CA /* MainView.swift in Sources */,
 				BB8EB9942AF97748009773CA /* DigimonTabView.swift in Sources */,
+				BBE7D6582AFBC52800F5B6E4 /* MyViewController.swift in Sources */,
 				BB8EB96A2AF96165009773CA /* SignInViewModel.swift in Sources */,
 				BB8EB98A2AF96CA4009773CA /* DigimonGridView.swift in Sources */,
 				BB8EB9682AF96159009773CA /* SignInView.swift in Sources */,
 				BB8EB9862AF96C93009773CA /* DigimonListViewModel.swift in Sources */,
 				BB8EB98F2AF9720D009773CA /* DigimonDetailView.swift in Sources */,
 				BB8EB9772AF96B1B009773CA /* Digimon.swift in Sources */,
-				BB8EB9562AF96102009773CA /* ContentView.swift in Sources */,
+				BBE7D65C2AFBC6A500F5B6E4 /* HiViewController.swift in Sources */,
 				BB8EB9732AF9686E009773CA /* NetworkManager.swift in Sources */,
 				BB8EB96D2AF962BF009773CA /* Color.swift in Sources */,
 				BB8EB9542AF96102009773CA /* DigidexSwiftUIApp.swift in Sources */,
 				BB8EB9822AF96C80009773CA /* DigimonListView.swift in Sources */,
 				BB8EB9712AF96857009773CA /* Constants.swift in Sources */,
 				BB8EB98C2AF96CB2009773CA /* DigimonGridViewCell.swift in Sources */,
+				BB8EB9992AF9C84A009773CA /* MainViewModel.swift in Sources */,
 				BB8EB9752AF96AFB009773CA /* DigimonService.swift in Sources */,
 				BB8EB9842AF96C89009773CA /* DigimonListViewCell.swift in Sources */,
 				BB8EB9912AF972C2009773CA /* Preview.swift in Sources */,
@@ -348,7 +480,49 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		BB7DCE412B0C65E900D70D3E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BB8EB94F2AF96102009773CA /* DigidexSwiftUI */;
+			targetProxy = BB7DCE402B0C65E900D70D3E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		BB7DCE422B0C65E900D70D3E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FVEGF5DQ7U;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = sugurutokuda.DigidexSwiftUIUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = DigidexSwiftUI;
+			};
+			name = Debug;
+		};
+		BB7DCE432B0C65E900D70D3E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FVEGF5DQ7U;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = sugurutokuda.DigidexSwiftUIUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = DigidexSwiftUI;
+			};
+			name = Release;
+		};
 		BB8EB95C2AF96103009773CA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -529,6 +703,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		BB7DCE442B0C65E900D70D3E /* Build configuration list for PBXNativeTarget "DigidexSwiftUIUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BB7DCE422B0C65E900D70D3E /* Debug */,
+				BB7DCE432B0C65E900D70D3E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		BB8EB94B2AF96102009773CA /* Build configuration list for PBXProject "DigidexSwiftUI" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

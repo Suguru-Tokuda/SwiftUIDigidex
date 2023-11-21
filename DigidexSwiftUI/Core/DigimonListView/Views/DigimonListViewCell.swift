@@ -18,7 +18,13 @@ struct DigimonListViewCell: View {
                     .aspectRatio(contentMode: .fit)
                     .frame(width: 100)
             } placeholder: {
-                Text(digimon.name)
+                ZStack {
+                    ProgressView()
+                        .progressViewStyle(.circular)
+                        .scaleEffect(3)
+                        .controlSize(.mini)
+                }
+                .frame(width: 100, height: 100)
             }
             VStack(alignment: .leading) {
                 Text(digimon.name)
