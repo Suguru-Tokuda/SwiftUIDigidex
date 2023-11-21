@@ -36,6 +36,7 @@ struct SignInView: View {
                                 .background(Color.theme.secondaryBackground.cornerRadius(25))
                                 .foregroundStyle(.black)
                                 .font(.headline)
+                                .accessibilityIdentifier("emailTextField")
                         }
                         
                         VStack(alignment: .leading) {
@@ -51,8 +52,8 @@ struct SignInView: View {
                                 .background(Color.theme.secondaryBackground.cornerRadius(25))
                                 .foregroundStyle(.black)
                                 .font(.headline)
+                                .accessibilityIdentifier("passwordTextField")
                         }
-
                     }
                     Spacer()
                     Spacer()
@@ -77,6 +78,7 @@ struct SignInView: View {
                                 .frame(maxHeight: 50)
                         }
                     })
+                    .accessibilityIdentifier("loginBtn")
                     .alert("Login failed", isPresented: $vm.showSignInAlert, actions: {
                         Button {
                             vm.resetTextFields()

@@ -31,6 +31,13 @@ struct DigimonTabView: View, Hashable {
                         icon: { Image(systemName: "circle.grid.2x1") }
                     )
                 }
+            FromSwiftUIToUIKit()
+                .tabItem {
+                    Label(
+                        title: { Text("UIKit") },
+                        icon: { Image(systemName: "swift") }
+                    )
+                }
         }
         .navigationBarBackButtonHidden()
         .onAppear {
