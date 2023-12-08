@@ -20,13 +20,15 @@ extension DisplayDigimonsInteractor: DisplayDigimonBusinessLogic {
         request: DisplayDigimon.LoadDigimon.Request,
         networkManager: NetworkableProtocol
     ) {
-        networkManager.makeGetRequestWithCompletion(url: URL(string: "\(Constants.apiBaseUrl)digimon")!, type: [Digimon].self) { [weak self] res in
-            switch res {
-            case .success(let digimons):
-                let response = DisplayDigimon.LoadDigimon.Response(digimonData: digimons)
-                self?.presenter?.presentDigimons(response: response)
-            case .failure(_):
-                break
+        DispatchQueue.global(qos: .utility).async {
+            networkManager.makeGetRequestWithCompletion(url: URL(string: "\(Constants.apiBaseUrl)digimon")!, type: [Digimon].self) { [weak self] res in
+                switch res {
+                case .success(let digimons):
+                    let response = DisplayDigimon.LoadDigimon.Response(digimonData: digimons)
+                    self?.presenter?.presentDigimons(response: response)
+                case .failure(_):
+                    break
+                }
             }
         }
     }

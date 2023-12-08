@@ -15,7 +15,7 @@ extension DigimonListView: DisplayDigimonDisplayLogic {
     func displayDigimons(viewModel: DisplayDigimon.LoadDigimon.ViewModel) {
         DispatchQueue.main.async {
             self.digimon.displayedDigimons = viewModel.digimons
-        }
+        }        
     }
     
     func fetchDigimons() {
