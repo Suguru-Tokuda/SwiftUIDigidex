@@ -12,5 +12,13 @@ protocol DisplayDigimonPresentationLogic {
 }
 
 class DisplayDigimonsPresenter {
-    var view: DisplayDigimonBusinessLogic?
+    var view: DisplayDigimonDisplayLogic?
+}
+
+extension DisplayDigimonsPresenter: DisplayDigimonPresentationLogic {
+    func presentDigimons(response: DisplayDigimon.LoadDigimon.Response) {
+        let vm = DisplayDigimon.LoadDigimon.ViewModel(digimons: response.digimonData)
+        
+        view?.displayDigimons(viewModel: vm)
+    }
 }

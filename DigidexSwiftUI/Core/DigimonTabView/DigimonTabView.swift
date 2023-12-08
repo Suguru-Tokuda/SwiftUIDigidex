@@ -11,6 +11,7 @@ struct DigimonTabView: View, Hashable {
     var body: some View {
         TabView {
             DigimonListView()
+                .configureView()
                 .tabItem {
                     Label(
                         title: { Text("List") },

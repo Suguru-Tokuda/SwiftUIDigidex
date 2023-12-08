@@ -6,3 +6,7 @@
 //
 
 import Foundation
+
+class DigimonDataStore: ObservableObject {
+    @Published var displayedDigimons: [Digimon] = []
+}

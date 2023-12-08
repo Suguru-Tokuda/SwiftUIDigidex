@@ -6,3 +6,17 @@
 //
 
 import Foundation
+
+enum DisplayDigimon {
+    enum LoadDigimon {
+        struct Request{}
+        
+        struct Response {
+            var digimonData: [Digimon]
+        }
+        
+        struct ViewModel {
+            var digimons: [Digimon]
+        }
+    }
+}
